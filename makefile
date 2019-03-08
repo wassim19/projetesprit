@@ -1,11 +1,5 @@
-prog:main.o menu.o
-	gcc main.o menu.o -lSDL -lSDL_image -lSDL_mixer -lSDL_ttf -o prog -g 
-
-main.o: main.c 
-	gcc -c main.c -g
-menu.o:menu.c
-	gcc -c menu.c -g
-
-
-
+prog: fonctions.o
+	gcc fonctions.o -o prog -lSDL -lSDL_image -lSDL_ttf -lSDL_mixer -g
+fonctions.o:fonctions.c
+	gcc -c fonctions.c -lSDL -lSDL_image -lSDL_ttf -lSDL_mixer -g
 
